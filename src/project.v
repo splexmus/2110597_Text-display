@@ -103,11 +103,10 @@ module tt_um_vga_example (
   wire [2:0] cube_character;
   wire [7:0] glyph_pixels;
   wire cube_pixel = glyph_pixels[3'd7 - pix_x[2:0]];
-  wire circle = pix_x * pix_x + pix_y * pix_y < 25;
 
   logic_ball animation_renderer (
-      .x(pix_x),
-      .y(pix_y),
+      .x({pix_x[9:3],3'b0}),
+      .y({pix_y[9:3],3'b0}),
       .angle(cube_angle),
       .character(cube_character)
   );
@@ -126,7 +125,7 @@ module tt_um_vga_example (
       B <= 0;
     end else begin
       if (video_active) begin
-        if (cube_pixel && circle) begin
+        if (cube_pixel) begin
           // Give each visible cube face its own shade/color.
           case (cube_character)
             3'd1: {R, G, B} <= 6'b11_11_11;
