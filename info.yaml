@@ -19,9 +19,8 @@ project:
     - "project.v"
     - "gamepad_pmod.v"
     - "hvsync_generator.v"
-    - "new_module.v"
-    - "new_module2.v"
-    - "new_module3.v"
+    - "logic_ball.v"
+    - "ascii_mem.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
