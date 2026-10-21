@@ -57,10 +57,6 @@ build.
 Install Icarus Verilog, then run a syntax/elaboration check from the project
 root:
 
-## Vga playground simulation
-
-You can open this simulation on this [this_link](https://vga-playground.com/?repo=https://github.com/splexmus/2110597_Text-display)
-
 ```sh
 iverilog -g2012 \
   -s tt_um_vga_example \
@@ -82,6 +78,10 @@ python3 -m venv .venv
 . .venv/bin/activate
 python3 -m pip install -r test/requirements.txt
 ```
+
+## Vga playground simulation
+
+You can open this simulation on this [this_link](https://vga-playground.com/?repo=https://github.com/splexmus/2110597_Text-display)
 
 ## Tiny Tapeout configuration
 
